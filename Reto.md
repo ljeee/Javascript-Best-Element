@@ -38,9 +38,9 @@ Validaciones utilizando valores truthy o falsy
   
   Botón con ciclo: Crear una lista de elementos en pantalla con base en una estructura repetitiva (por ejemplo, mostrar los días de la semana). Usar for y manipulación del DOM.
 ## Entregables
-  -Archivo HTML principal con todos los botones
-  -Archivo JS con las seis funcionalidades implementadas
-  -Archivo CSS básico con estilos para los botones y la página
+  @@-Archivo HTML principal con todos los botones.@@
+  @@-Archivo JS con las seis funcionalidades implementadas.@@
+  @@-Archivo CSS básico con estilos para los botones y la página.@@
 ## Presentación
 La presentación se realizará el día viernes en formato tipo pitch. Cada célula tendrá un máximo de 8 minutos para:
 
