@@ -25,25 +25,26 @@ Al menos una estructura repetitiva (for o while)
 Uso de estructuras de datos (arrays u objetos)
 Validaciones utilizando valores truthy o falsy
 ## Tickets de desarrollo (uno por cada funcionalidad)
-Botón de saludo condicional: Mostrar un mensaje distinto según la hora del día (buenos días, tardes o noches). Utilizar condicionales y una función.
 
-Botón contador: Cada vez que el botón sea presionado, debe aumentar un contador y actualizar el valor en pantalla. Usar una variable y modificación del DOM.
-
-Botón selector aleatorio: Elegir aleatoriamente un mensaje de un array y mostrarlo. Usar estructuras de datos y funciones.
-
-Botón validador de entrada: Validar si un campo de texto tiene contenido. Si está vacío, mostrar un mensaje de advertencia. Usar truthy/falsy y condicional.
-
-Botón de cambio de color: Al presionar, cambiar el color de fondo de un elemento utilizando valores definidos en una estructura de datos. Usar arrays y condicionales.
-
-Botón con ciclo: Crear una lista de elementos en pantalla con base en una estructura repetitiva (por ejemplo, mostrar los días de la semana). Usar for y manipulación del DOM.
+  Botón de saludo condicional: Mostrar un mensaje distinto según la hora del día (buenos días, tardes o noches). Utilizar condicionales y una función.
+  
+  Botón contador: Cada vez que el botón sea presionado, debe aumentar un contador y actualizar el valor en pantalla. Usar una variable y modificación del DOM.
+  
+  Botón selector aleatorio: Elegir aleatoriamente un mensaje de un array y mostrarlo. Usar estructuras de datos y funciones.
+  
+  Botón validador de entrada: Validar si un campo de texto tiene contenido. Si está vacío, mostrar un mensaje de advertencia. Usar truthy/falsy y condicional.
+  
+  Botón de cambio de color: Al presionar, cambiar el color de fondo de un elemento utilizando valores definidos en una estructura de datos. Usar arrays y condicionales.
+  
+  Botón con ciclo: Crear una lista de elementos en pantalla con base en una estructura repetitiva (por ejemplo, mostrar los días de la semana). Usar for y manipulación del DOM.
 ## Entregables
--Archivo HTML principal con todos los botones
--Archivo JS con las seis funcionalidades implementadas
--Archivo CSS básico con estilos para los botones y la página
+  -Archivo HTML principal con todos los botones
+  -Archivo JS con las seis funcionalidades implementadas
+  -Archivo CSS básico con estilos para los botones y la página
 ## Presentación
 La presentación se realizará el día viernes en formato tipo pitch. Cada célula tendrá un máximo de 8 minutos para:
 
--Explicar su código
--Mostrar el tablero de trabajo en Azure
--Exponer la solución propuesta y cómo se distribuyeron las responsabilidades
+  -Explicar su código
+  -Mostrar el tablero de trabajo en Azure
+  -Exponer la solución propuesta y cómo se distribuyeron las responsabilidades
 Se valorará la claridad en la exposición técnica, la participación de todos los integrantes y la correcta aplicación de los conceptos abordados en las lecciones.
