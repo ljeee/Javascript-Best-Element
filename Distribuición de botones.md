@@ -1,11 +1,11 @@
-#Esteban Orozco Osorio 
-Boton contador
-#Juan Diego Hernandez Martínez 
-Bóton saludo condicional
-Bton selector aleatoro
-#Kevin Esneider Londoño Zuluaga 
-Boton cambio 
-#Santiago Botero Ramírez 
-Validar entrada
-#Michael Franco Falla 
-Boton con ciclo
+# Esteban Orozco Osorio 
+2.Boton contador
+# Juan Diego Hernandez Martínez 
+1. Bóton saludo condicional
+3. Bóton selector aleatoro
+# Kevin Esneider Londoño Zuluaga 
+5. Botón de cambio de color
+# Santiago Botero Ramírez 
+4.Botón validador de entrada
+# Michael Franco Falla 
+6.Boton con ciclo
