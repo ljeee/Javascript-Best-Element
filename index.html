@@ -4,15 +4,28 @@
   <title>Validador de Entrada</title>
 </head>
 <body>
-
+  <!-- Santiago Button-->
   <input type="text" id="inputTexto" placeholder="Escribe algo aquí">
   <button onclick="validarEntrada()">Validar</button>
-
   <p id="mensaje"></p>
+  
+  <hr>
+  <!-- Esteban Button -->
 
-  <!-- Enlace al archivo JS externo -->
+  <h1>Contador: <span id="contador">0</span></h1>
+  <button onclick="modificarContador('disminuir')">Disminuir</button>
+  <button onclick="resetContador()">Reset</button>
+  <button onclick="modificarContador('aumentar')">Aumentar</button>
+
+  <hr>
+  <!-- Maicol Button -->
+
+  <button id="boton">Click here para ver los dias de la semana</button>
+  <ul id="lista"></ul>
+
+  <!-- Enlace a los archivos JS externos al final del body -->
   <script src="script.js"></script>
-
+  <script src="./boton_contador.js"></script>
 </body>
 </html>
 
