@@ -1,1 +1,7 @@
-
+#boton{
+    background-color: aqua;
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 44px;
+    cursor:pointer;
+}
