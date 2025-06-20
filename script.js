@@ -1,55 +1,78 @@
-// Button Validar Entrada Santiago
-function validarEntrada() {
-  const texto = document.getElementById("inputTexto").value;
-  const mensaje = document.getElementById("mensaje");
-
-  if (texto) { // truthy
-    mensaje.textContent = "Entrada válida: " + texto;
-    mensaje.style.color = "green"
-  } else { // falsy
-    mensaje.textContent = "El campo está vacío. Por favor, escribe algo.";
-    mensaje.style.color = "red"
-  }
+// Ticket 1: Botón de saludo condicional
+function getGreeting(hour) {
+    if (hour >= 6 && hour < 12) {
+        return '¡Buenos días!';
+    } else if (hour >= 12 && hour < 19) {
+        return '¡Buenas tardes!';
+    } else {
+        return '¡Buenas noches!';
+    }
 }
+document.getElementById('greetBtn').addEventListener('click', function() {
+    const hourInput = document.getElementById('hourInput').value;
+    const hour = Number(hourInput);
+    const msgSpan = document.getElementById('greetMsg');
+    if (hourInput === '' || isNaN(hour) || hour < 0 || hour > 23) {
+        msgSpan.textContent = 'Por favor, ingresa una hora válida (0-23).';
+        return;
+    }
+    msgSpan.textContent = getGreeting(hour);
+});
 
-// Button Contador Esteban
-let valorContador = 0;  
-const contadorElemento = document.getElementById("contador"); 
+// Ticket 2: Botón contador
+let counter = 0;
+document.getElementById('counterBtn').addEventListener('click', function() {
+    counter++;
+    document.getElementById('counterValue').textContent = counter;
+});
 
-const acciones = {
-  aumentar: 1,
-  disminuir: -1
-};
-
-function modificarContador(accion) {
-  if (acciones[accion]) {
-    valorContador += acciones[accion];  
-  } 
-  actualizarPantalla();
+// Ticket 3: Botón selector aleatorio
+const randomMessages = [
+    '¡Sigue adelante!',
+    '¡Hoy es tu día!',
+    '¡Puedes lograrlo!',
+    '¡No te rindas!',
+    '¡Eres increíble!'
+];
+function getRandomMessage(arr) {
+    const idx = Math.floor(Math.random() * arr.length);
+    return arr[idx];
 }
+document.getElementById('randomBtn').addEventListener('click', function() {
+    document.getElementById('randomMsg').textContent = getRandomMessage(randomMessages);
+});
 
-function resetContador() {
-  valorContador = 0;
-  actualizarPantalla();
+// Ticket 4: Botón validador de entrada
+function isInputValid(value) {
+    return value;
 }
-
-function actualizarPantalla() {
-  contadorElemento.textContent = valorContador;
-}
-
-//Button Maicol Dias
-const semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]; //Se hace la lista
-let count = 0; //Pues pongo un contador para que pueda iniciar desde cero y asi muestre desde 0 que viene siendo Lunes en la lista.
-
-boton.addEventListener("click", () => { //Le pongo el click, porque quiero que actue al hacerle click 
-    const lista = document.getElementById("lista");//Llamo al document (HTML) para buscar el id de Lista que es el UL que tengo alla
-
-    for (let x = count; x < count + 1; x++) { //Aqui le estamos diciendo que x toma el valor de count (O asi lo entiendo yo), luego esta diciendo que x debe ser menor a count, entonces como count es 0 se suma y como siempre va a ser menor x que count ya que se esta recorriendo, pues va a seguir subiendo, pero por eso le pusimos el x++ para que solo recorra la lista una vez.
-        const li = document.createElement("li"); //Aqui le damos una constante li que crea listas dentro de la clase "li" del HTML
-        li.textContent = semana[x]; //con el textContent toma lo que esta dentro de la lista y luego le estamos diciendo
-        lista.appendChild(li); //Agregamos a lista los dias de la semana en orden
-    }count++; //Se suma para que asi pueda pasar al siguiente dia
-    if (count > semana.length) { //Aqui estamos diciendo que si count es mayor o igual a la longitud de semana (Osea al llegar a 6 que es domingo muestra el dia y al darle click ya se reinicia) se reinicie.
-        count = 0; //Cuando lo de arriba es correcto se reinicia desde 0
+document.getElementById('validateBtn').addEventListener('click', function() {
+    const input = document.getElementById('inputField').value;
+    if (isInputValid(input)) {
+        document.getElementById('validateMsg').textContent = '¡Entrada válida!';
+    } else {
+        document.getElementById('validateMsg').textContent = 'Por favor, escribe algo.';
     }
 });
+
+// Ticket 5: Botón de cambio de color
+const colors = ['#f8d7da', '#d4edda', '#d1ecf1', '#fff3cd', '#cce5ff'];
+let colorIndex = 0;
+document.getElementById('colorBtn').addEventListener('click', function() {
+    colorIndex = (colorIndex + 1) % colors.length;
+    document.body.style.background = colors[colorIndex];
+    document.getElementById('colorMsg').textContent = `Color cambiado (${colorIndex + 1})`;
+});
+
+// Ticket 6: Botón con ciclo (mostrar días de la semana)
+const days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+function renderDaysList() {
+    const ul = document.getElementById('daysList');
+    ul.innerHTML = '';
+    for (let i = 0; i < days.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = days[i];
+        ul.appendChild(li);
+    }
+}
+document.getElementById('listBtn').addEventListener('click', renderDaysList);
