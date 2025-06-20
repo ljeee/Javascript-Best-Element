@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-  <title>Validador de Entrada</title>
+  <meta charset="UTF-8">
+  <title>Contador Interactivo</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
-
 <body>
+  <h1>Contador: <span id="contador">0</span></h1>
+  <button onclick="modificarContador('disminuir')">Disminuir</button>
+  <button onclick="resetContador()">Reset</button>
+  <button onclick="modificarContador('aumentar')">Aumentar</button>
+  
+  <script src="./boton_contador.js"></script>
 
-  <input type="text" id="inputTexto" placeholder="Escribe algo aquí">
+   <!-- Button Validar entrada -->
+    <input type="text" id="inputTexto" placeholder="Escribe algo aquí">
   <button onclick="validarEntrada()">Validar</button>
 
   <p id="mensaje"></p>
@@ -18,7 +24,11 @@
 
   <!-- Enlace al archivo JS externo -->
   <script src="script.js"></script>
+  
+   <!-- Button amicol -->
+  
+  <button id="boton">Click here para ver los dias de la semana</button>
+  <ul id="lista"></ul>
 
 </body>
-
 </html>
